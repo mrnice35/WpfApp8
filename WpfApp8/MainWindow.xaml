@@ -48,9 +48,6 @@
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
-        <TextBox x:Name="textBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" Style="{DynamicResource TextBlockStyle}" >
-
-        </TextBox>
         <Menu Grid.Row="0" Margin="5,5,0,5" Padding="5" Width="50" HorizontalAlignment="Left" >
             <MenuItem Header="_Файл">
                 <MenuItem Header="_Открыть" Command="Open"/>
@@ -59,5 +56,13 @@
                 <MenuItem Command="local:Mycommands.Exit"/>
             </MenuItem>
         </Menu>
+        <TextBox x:Name="textBox" 
+                 Grid.Row="2" 
+                 Margin="5" 
+                 Padding="5" 
+                 FontSize="{Binding Source={StaticResource FontSize}}" 
+                 FontFamily="{Binding Source={StaticResource FontFamily}}" 
+                 TextWrapping="Wrap" 
+                 Style="{DynamicResource TextBlockStyle}"/>
     </Grid>
 </Window>
